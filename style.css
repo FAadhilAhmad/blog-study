@@ -8,6 +8,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+.judul{
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #FF8C00;
+    max-width: 700px;
+    margin: 10px auto;
+    border-radius: 8px;
+}
 body{
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -38,6 +49,33 @@ body{
     justify-content: center;
     align-items: center;
 }
+.intro{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    color: #333;
+    max-width: 90%;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    color: #333;
+    max-width: 90%;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+}
 .container-intro p{
     font-size: 18px;
     line-height: 1.6;
@@ -46,6 +84,9 @@ body{
 }
 .container-none{
     display: none;
+}
+.container-appear{
+    display: flex;
 }
 .btn-intro{
     max-width: 50%;
@@ -57,6 +98,8 @@ body{
     margin-top: 20px;
     font-size: 16px;
     font-weight: bold;
+    justify-self: center;
+    align-self: center;
 }
 .btn-intro:hover{
     background-color: #9575cd;
@@ -74,4 +117,23 @@ body{
     height: auto;
     border-radius: 50%;
     margin-bottom: 20px;
+}
+@media screen and (max-width: 700px){
+    .intro img, .intro2 img{
+        width: 80%;
+    }
+    .btn-intro{
+        max-width: 80%;
+    }
+    body{
+        padding: 10px;
+    }
+    .judul{
+        font-size: 20px;
+    }
+    .container-intro, .intro, .intro2 .judul{
+        max-width: 100%;
+        padding: 10px;
+        margin: 20px;
+    }
 }
