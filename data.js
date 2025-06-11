@@ -11,8 +11,8 @@ function btnIntro() {
         intro2.classList.add('container-none');
     }
     introVisible = !introVisible;
-}
+} // fuction untuk tombol play intro 
 window.onload =function () {
-    document.getElementById('intro').classList.add("container-none");
+    document.getElementById('intro').classList.add("container-none"); //untuk menyembunykan intro1
     document.getElementById("intro2").classList.remove("container-none");
 }
