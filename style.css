@@ -1,213 +1,38 @@
-:root{
-    --btnColor: #b388eb;
-    --textCntent: #333;
-    --textSecondary: #fff;
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.judul{
-    font-size: 24px;
-    color: #fff;
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #FF8C00;
-    max-width: 700px;
-    margin: 10px auto;
-    border-radius: 8px;
-}
-body{
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #fff;
-    max-width: 700px;
-    background-color: #333;
-    margin: 10px auto;
-    padding: 20px;
-}
-.judul{
-    text-align: center;
-    font-size: 24px;
-    color: #fff;
-    margin-bottom: 20px;
-}
-/* introduction my propil */
-.container-intro{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    color: #333;
-    max-width: 90%;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-}
-.intro{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    color: #333;
-    max-width: 90%;
-    margin: 20px auto;
-    justify-content: center;
-    align-items: center;
-}
+let introVisible = true;
 
-.intro2{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    color: #333;
-    max-width: 90%;
-    margin: 20px auto;
-    justify-content: center;
-    align-items: center;
-}
-.container-intro p{
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-    padding: 10px;
-}
-.container-none{
-    display: none;
-}
-
-.btn-intro{
-    max-width: 50%;
-    padding: 10px 20px;
-    background-color: #b388eb;
-    border: none;
-    border-radius: 10px;
-    color: #fff;
-    margin-top: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    justify-self: center;
-    align-self: center;
-}
-.btn-intro:hover{
-    background-color: #9575cd;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.intro img{
-    width: 50%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-.intro2 img{
-    width: 50%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-/* end introduction */
-
-/* info teck yg dipelajari */
-.non-view{
-    display: none;
-}
-.teck-view{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: #fff;
-    max-width: 90%;
-    margin: 20px auto;
-    color: var(--textCntent);
-    padding: 20px;
-    border-radius: 8px;
-}
-.iconTeck {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    padding: 20px;
-    max-width: 100%;
-    
-}
-.iconTeck svg {
-    width: 100px;
-    height: 100px;
-    fill: var(--btnColor);
-    transition: transform 0.3s ease;
-}
-.btnIntro{
-    max-width: 30%;
-    justify-self: center;
-    width: 100%;
-    align-self: center;
-    background-color: var(--btnColor);
-    color: var(--textSecondary);
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.layer2{
-    grid-column: 1/-1;
-    justify-self: center;
-    width: 100%;
-}
-   
-.layer2 img{
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: 80%;
-    height: auto;
-    border-radius: 8px;
-}
-/* end info teck yg di pelajari */
-
-/* animation scroll */
-.scroll-animation {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-in-out;
-}
-.scroll-animation.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-@media screen and (max-width: 700px){
-    .intro img, .intro2 img{
-        width: 80%;
+function btnIntro() {
+    const intro1 = document.getElementById("intro");
+    const intro2 = document.getElementById("intro2");
+    if (introVisible) {
+        intro1.classList.add('container-none');
+        intro2.classList.remove('container-none');
+    }else {
+        intro1.classList.remove('container-none');
+        intro2.classList.add('container-none');
     }
-    .btn-intro{
-        max-width: 80%;
-    }
-    body{
-        padding: 10px;
-    }
-    .judul{
-        font-size: 20px;
-    }
-    .container-intro, .intro, .intro2 .judul{
-        max-width: 100%;
-        padding: 10px;
-        margin: 20px;
-    }
+    introVisible = !introVisible;
+} // fuction untuk tombol play intro 
+window.onload =function () {
+    document.getElementById('intro').classList.add("container-none"); //untuk menyembunykan intro1
+    document.getElementById("intro2").classList.remove("container-none");
 }
+ let viewTeck = true;
+
+ function btnViewTeck() {
+    const layer1 = document.getElementById('iconTeck');
+    const layer2 = document.getElementById('layer2');
+
+   if (viewTeck){
+        layer1.classList.remove('non-view');
+        layer2.classList.add('non-view');
+   }else{
+        layer1.classList.add('non-view');
+        layer2.classList.remove('non-view');
+   }
+   viewTeck = !viewTeck;
+ }
+ window.onload = function () {
+    document.getElementById('iconTeck').classList.remove('non-view'); //untuk menyembunyikan iconTeck
+    document.getElementById('layer2').classList.add('non-view');
+ }
+
