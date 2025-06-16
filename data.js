@@ -1,50 +1,39 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // instalasi untuk intro section
-    let introVisible = false;
+window.onload = function () {
     const intro1 = document.getElementById('intro');
     const intro2 = document.getElementById('intro2');
-    const tombolIntro = document.querySelector('.btn-intro');
+    const tombolIntro = document.getElementById('btnToggle');
 
-    // instalasi icon tecknologi
-    let dislayIcon = false;
-    const layer1 = document.getElementById('cover');
-    const layer2 =document.getElementById('icon');
-    const tombolicon = document.querySelector('.btnView');
-   
-    // set state awal intro
+    const cover = document.getElementById('cover1');
+    const icon = document.getElementById('icon1');
+    const tombolView = document.getElementById('btnView');
+
+    // Set kondisi awal
     intro1.classList.add('container-none');
     intro2.classList.remove('container-none');
 
-    // set state awal icon
-    layer1.classList.remove('teck-none');
-    layer2.classList.add('teck-none');
-
-    // Fungsi untuk toggle icon
-    tombolicon.addEventListener('click', function () {
-        layer1.classList.toggle('teck-none');
-        layer2.classList.toggle('teck-none');
-
-        // Update teks tombol
-        if (layer1.classList.contains('teck-none')) {
-            tombolicon.textContent = 'Show Technology Icons';
-        } else {
-            tombolicon.textContent = 'Hide Technology Icons';
-        }
-    });
-
-    // Fungsi untuk toggle intro
+    cover.classList.remove('teck-none');
+    icon.classList.add('teck-none'); 
+   
+    // Tombol Intro: toggle dua bagian intro
     tombolIntro.addEventListener('click', function () {
         intro1.classList.toggle('container-none');
         intro2.classList.toggle('container-none');
 
-        // Update teks tombol
         if (intro1.classList.contains('container-none')) {
             tombolIntro.textContent = 'Play Introduction';
         } else {
             tombolIntro.textContent = 'Hide Introduction';
         }
     });
+    // Tombol view: toggle cover dan icon
+    tombolView.addEventListener('click', function(){
+        cover.classList.toggle('teck-none');
+        icon.classList.toggle('teck-none');
 
-  
-   
-})
+        if (cover.classList.contains('teck-none')) {
+            tombolView.textContent = 'Show Cover';
+        } else {
+            tombolView.textContent = 'Hide Cover';
+        }
+    })
+};
