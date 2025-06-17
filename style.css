@@ -119,52 +119,54 @@ body{
 /* end introduction */
 
 /* info teck yg dipelajari */
-.teck-none{
-    display: none;
-}
 .teck-view{
     display: flex;
     flex-direction: column;
     max-width: 90%;
-    margin: 20px auto;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
     background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+}
+.layer1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
     color: var(--textCntent);
 }
-.icon1{
+.icon{
     display: flex;
-    padding: 10px ;
-    margin: 10px;
+    margin: 10px auto;
+    padding: 10px; 
+    align-items: center;
+    justify-content: center;
+    color: var(--textCntent);
 }
-.icon-item img{
-    width: 100px;
-    height: 100px;
+.icon img{
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     margin-right: 10px;
 }
-.cover1{
-    display:  flex;
-    justify-content: center;
-    margin: 20px;
+.layer2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+    color: var(--textCntent);
+    margin: 20px auto;
 }
-.cover1 img{
-    width: 50%;
-    height: auto;
-    border-radius: 8px;
-    justify-self: center;
-}
-.btnView{
-    max-width: 50%;
-    padding: 10px 50px;
+.layer2 img{
+    width: 70%;
+    height: 70%;
     border-radius: 10px;
-    border: none;
-    background-color: var(--btnColor);
-    color: var(--textSecondary);
-    font-size: 16px;
-    font-weight: bold;
+    margin-right: 10px;
 }
+.hide-layer{
+    display: none;
+}
+
 @media screen and (max-width: 700px){
     .intro img, .intro2 img{
         width: 80%;
