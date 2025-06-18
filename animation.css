@@ -1,0 +1,36 @@
+.container-intro{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: muncul 1s ease-in-out forwards;
+}
+@keyframes muncul {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.teck-view{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: muncul 1s ease-in-out forwards;
+}
+.btn-music {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1000;
+}
+.btn-music img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
