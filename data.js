@@ -38,3 +38,13 @@ window.onload = function () {
         }
     });
 }
+const btn = document.getElementById('playMusic');
+const audio = document.getElementById('mp3');
+
+btn.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+});
