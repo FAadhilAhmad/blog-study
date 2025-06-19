@@ -1,3 +1,8 @@
+:root{
+    --btnColor: #b388eb;
+    --textCntent: #333;
+    --textSecondary: #fff;
+}
 .container-intro{
     opacity: 0;
     transform: translateY(20px);
@@ -33,4 +38,39 @@
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+}
+/* style chatbox */
+.chat1{
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    background-color: white;
+    color: var(--textCntent);
+    padding: 20px;
+    border-radius: 8px;
+}
+.chat1 h3{
+    margin-bottom: 10px;
+    color: var(--textCntent);
+    text-align: center;
+}
+.non-chat{
+    display: none;
+}
+.chatBox1{
+    border: none;
+    background-color: var(--btnColor);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
 }
